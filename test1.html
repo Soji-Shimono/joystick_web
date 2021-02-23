@@ -1,0 +1,75 @@
+<!--Reference site-->
+<!--https://www.codegrid.net/articles/touch-click-pointer-1/-->
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Touch test</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div{
+                position:absolute;
+            }
+        .elem{
+            width: 200px;
+            height: 200px;
+            background-color:blue
+            }
+        #elem2{
+            width: 20px;
+            background-color:blue
+        }
+        .pos{
+            left: 50px;
+            top: 450px;
+        }
+        .pos2{
+            left: 800px;
+            top: 450px;
+        }
+        .pos3{
+            left: 50px;
+            top: 50px;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+<div id="leftstick" class="elem pos">Left stick
+    <div id="leftcoords">X:<span id="x_l"></span> Y:<span id="y_l"></span></div>
+</div>
+
+<div id="rightstick" class="elem pos2">Right stick
+    <div id="leftcoords">X:<span id="x_r"></span> Y:<span id="y_r"></span></div>
+</div>
+
+<div class="pos3">
+    <canvas id="teststick" >Test stick
+    </canvas>
+    <div id="testcoords">X:<span id="x_t"></span> Y:<span id="y_t"></span></div>
+</div>
+<canvas id="canvastest">Test stick
+</canvas>
+
+    
+</canvas>
+<script src="test1.js"></script>
+<script>
+    var canvas = document.getElementById('teststick');
+    var context = canvas.getContext('2d');
+    teststick.width = 200;
+    teststick.height = 200;
+    context.beginPath();
+    context.arc(100,100,90,0,Math.PI*2,true);
+    context.stroke();
+    //context.fill();
+    var canvas2 = document.getElementById('canvastest');
+    var context2 = canvas2.getContext('2d');
+    context2.arc(150,150,100,0,Math.PI*2,true);
+    context2.fill();
+</script>
+</body>
+</html>
